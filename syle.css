@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Gupter:wght@400;500;700&family=Sankofa+Display&display=swap');
+@font-face {
+    font-family: "Sankofa Display";
+    src: url(./Fonte/SankofaDisplay-Regular.ttf);
+}
+
+/* UNIVERSAL */
+*{
+   /* box-sizing: border-box; DEIXA DE ACORDO COM O CONTEUDO */
+    font: normal 400 1.2em "Sankofa Display", sans-serif;
+} 
+
+h1{ 
+    background-color: rgb(238, 130, 238);
+    color: yellowgreen;
+    text-align: center;
+}
+body{
+    background-color: wheat;
+    /* TIPOS DE ESCOPO DE FONTE: EM, PX, REM 
+    EM: RELATIVO A CONFIGURAÇÃO DO USUARIO (16 pixels)
+    PX: NÃO ALTERA O TAMANHO, FICA ESTATICO 
+    vw: relativo a tela do usuario (DINAMICO)
+    vh: relativo a tela do usuario (DINAMICO
+    
+    /* font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: aqua;  
+    
+    TUDO EM UMA LINHA SÓ: style > weight > size > family */
+
+}
+/* ID É # PARA LOCALIZAR O P*/
+/* CLASSE É . PARA LOCALIZAR O P*/
+
+#pedro{
+    background-color: slateblue;
+}
+.classe{
+    background-color: yellow;
+}
+
+/* COMO UTILIZAR CLASSE PARA UMA VERTENTE SÓ*/
+h1.classe{
+    background-color: springgreen;
+}
+
+/* PARA PEGAR UM ESPECIFICO(DIRETAMENTO FILHO) SEM PRECISAR DE CLASSE OU ID */
+li > strong {
+    color: crimson;
+}
+
+/* PARA PEGAR UM DESCENDENTE (SEM NECESSARIAMENTE SER FILHO) SEM PRECISAR DE CLASSE OU ID */
+
+a strong{
+   color: skyblue;
+}
+
+.padding{
+    margin: 50px; /*DIFERENÇA ENTRE UM CONTEUDO E O OUTRO*/
+    /* TOP > RIGHT > BOTTOM > LEFT*/
+    padding: 30px, 20px, 15px , 30px; /* DIFERENÇA ENTRE UM O PADDING E A MARGEM (O RESPIRO)*/
+    border-width: 30px; /* DIFERENÇA ENTRE A BORDA E O PADDING*/
+    border-radius: 50%;
+    border: 30px solid darkgoldenrod; 
+ }
+/* ORDEM DA BOX DO CONTEUDO : MARGIN > BORDER > PADDING*/
+.invisivel{
+    display: none; /* DEIXA O VETOR INEXISTENTE*/
+    /* visibility: hidden;  DEIXA O VETOR SEM VER MAS SE VOCE PASSAR A TELA POR CIMA VOCE CONSEGUE VER*/
+    
+}
+
+.containerEstoque{
+display: flex; /*DEIXA UM DO LADINHO DO OUTRO, GRID DEIXA EMBAIXO, IMPORTANTE DEIXAR NO PAI*/
+flex-direction: row; /*1 A 4  / REVERSE ROW 4 A 1*/
+justify-content:center; /*DEIXA ELE JUNTINHO COM CENTER START E DEIXA SEPARADO COM SPACE BETTWEN*/
+height: 30vh;
+align-items: start;
+flex-wrap:wrap;
+align-content: start;
+gap: 5px;  /*Column-gap : 5px I  row - gap: 5px I gap: 5px */
+}
+
+.caixa{
+width: 100px;
+height: 100px;
+text-align: center;
+font-size: 3em;
+/*min-width: 70px;*/
+
+
+}
+.um{
+background-color: red;
+/*flex-shrink: 0;
+flex-grow: 1;*/
+}
+.dois{
+background-color: yellow;
+}
+.tres{
+background-color:royalblue;
+    }
