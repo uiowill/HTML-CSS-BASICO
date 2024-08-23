@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--a escala vai de 0.1 a 10-->
     <title>Document</title>
     <link rel="shortcut icon" href="Fotos/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="syle.css">
+    <link rel="stylesheet" href="syle.css" media="screen">''
+    <link rel="stylesheet" href="impressao.css" media="print"> <!--SERVE PARA IMPRESSÃO-->
     </style>
 
 </head>
 <body style="background-color: aliceblue;">
 
-    <img 
-    src="https://upload.wikimedia.org/wikipedia/pt/d/df/Sonic_1991.png" alt="descrição"/>
-    <img src="Fotos/foto.png" alt="foto pasta"/>
+  <div>
+    kjnkjbnkj
+  </div>
     
     <video src="Fotos/video.mp4" controls width="500" alt="oi"></video> <!--VIDEO-->
 
@@ -109,5 +110,62 @@
 
             </div>
 
-</body>
+            <!-- DIVS SEMANTICAS -->
+
+            <footer></footer> 
+            <main></main>
+            <header></header> <!--  CABEÇALHO DE CONTEUDO GERALMENTE TEM UM NAV JUNTO -->
+            <aside></aside> <!-- CONTEUDOS AO LADO -->
+            <section></section> <!-- SÃO BLOCOS DE SITE-->
+            <nav></nav> <!-- SERVE PARA NAVEGAR PELO SITE EXEMPLO UM SUMARIO -->
+             <article></article> <!--ARTIGO COISAS JORNALISTICAS -->
+             <div></div> <!--SERVE PARA O RESTO -->
+            
+            <!-- PSEUDOCLASSES -->
+            <!-- BOM PROCURAR NO GOOGLE -->
+            <!-- hover -->
+            <!-- visited -->
+
+            <table>
+                <th>BOLETIM ESCOLAR - ENSINO MÉDIO</th>
+            <div>
+                <th>MATERIAS</th>
+                <th>1 NOTA</th>
+                <th>2 NOTAS</th>
+                <th>3 NOTA</th>
+                <th>4 NOTAS</th>
+                <th>MEDIA</th>
+            </div>
+                    <td>A1</td>
+                    <td>B1</td>
+                    <td>C1</td>
+                    <td>D1</td>
+                </tr>
+                <tr>
+                    
+                    <td>A2</td>
+                    <td>B2</td>
+                    <td>C2</td>
+                    <td>D2</td>
+                </tr>
+            </table>
+
+            <!--IMPORTAR OUTRO SITE NO SEU SITE-->
+            <iframe src="https://www.se.senac.br/" frameborder="0"></iframe>
+
+
+            <!--RESPONSIVIDADE-->
+            <h1>--RESPONSIVIDADE--</h1>
+            <!--FOTO-->
+            <picture>
+                <source media="(max-width: 330px)" srcset="Fotos/foto.png">
+                <img src="Fotos/foto.png" alt="fundo">
+            </picture>
+            <!--VIDEO-->
+            <div class="responsividadeVideo">
+            <iframe src="Fotos/video.mp4" frameborder="0" width="560" height="315"></iframe></div>
+            
+            <div class="respnsividadeDIV"></div>
+
+        </body>
 </html>

@@ -16,7 +16,12 @@ h1{
     text-align: center;
 }
 body{
-    background-color: wheat;
+    /* background-image: url(Fotos/foto.png); */
+    background-size:  480vw 480vh;
+    background-repeat: no-repeat;
+    background-size: cover; /* DEIXA ELE INTEIRO SEM REPETIR, SE VOCÊ TIRAR ELE FICA REPETINDO NA TELA TODA */
+    background-attachment: fixed;
+    background-image: linear-gradient(to right, red, green, blue);
     /* TIPOS DE ESCOPO DE FONTE: EM, PX, REM 
     EM: RELATIVO A CONFIGURAÇÃO DO USUARIO (16 pixels)
     PX: NÃO ALTERA O TAMANHO, FICA ESTATICO 
@@ -93,7 +98,8 @@ font-size: 3em;
 
 }
 .um{
-background-color: red;
+box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.202); /*  direita > baixo > blur (INSET DEIXA TUDO PRA BAIXO)*/
+text-shadow: 1px 1px 5px blue; /* OBEDECE AS MESMAS REGRAS DE  */
 /*flex-shrink: 0;
 flex-grow: 1;*/
 }
@@ -103,3 +109,87 @@ background-color: yellow;
 .tres{
 background-color:royalblue;
     }
+
+/* PSEUDOCLASSE BOM PESQUISAR NO GOOGLE */
+    
+.tres:hover{
+    width: 300px;
+    height: 400px;
+    background-color: var(--corNumero1); /* DECLARAÇÃO VARIAVEL */
+}
+
+.dois:visited{  
+    background-color: purple;
+}
+
+
+/* PSEUDO ELEMENT BOM PESQUISAR NO GOOGLE */
+
+.um::before{
+    content: "*";
+}
+
+.um::after{
+    content: "*";
+}
+
+.classe::first-letter{
+    font-size: 2em;
+}
+
+/* CRIAÇÃO DE VAR NO CSS */
+:root{
+/* PARA QUE TODOS TENHAM ACESSO */
+    --corNumero1: red;
+}
+div>p{
+    width: 100vw;
+    height: 200px;
+
+}/* SE QUISER DEIXAR NO FUNDO USE NO BODY */
+
+
+/* RESPONSIVIDADE DE VIDEO */
+.responsividadeVideo{
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+iframe{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+/* MEDIA QUERY */
+.responsividadeDiv{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+@media screen and (max-width: 600px){
+    .responsividadeDiv{
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .responsividadeDiv{
+        background-color: blue;
+    }
+}
+@media screen and (min-width: 768px){
+    .responsividadeDiv{
+        background-color: yellow;
+    }
+}
+@media screen and (min-width:992px){
+    .responsividadeDiv{
+        background-color: orange;
+    }
+}
+

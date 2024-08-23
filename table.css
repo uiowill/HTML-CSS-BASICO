@@ -1,0 +1,21 @@
+/* ISSO TUDO AQUI É PRA DEIXAR 
+    QUE O COMEÇO DA TABELA FIQUE REAPARECENDO MESMO QUANDO 
+    DAR SCROLL DOWN
+
+*/
+
+table{
+    position: relative;
+}
+thead{
+    position: sticky;
+    background-color: green;
+    top: 0;
+}
+
+tbody > tr:nth-child(even){
+    background-color: purple;
+} /* // PAR (ODD) IMPAR */
+tbody > tr:nth-child(odd){
+    background-color: red;
+} /* // PAR (ODD) IMPAR */
